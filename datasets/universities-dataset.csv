@@ -1,9 +1,31 @@
-university_degree,program_of_study,number_of_students,male,female
-education,bachelor,390,24,366
-art_and_human_resources,bachelor,2085,616,1469
-social_science,bachelor,1785,335,1450
-business,bachelor,4268,1985,2283
-technology,bachelor,2701,1830,871
-construction_and_production_engineering,bachelor,1971,1068,903
-Medicine,bachelor,2642,618,1844
-Services,bachelor,516,338,178
+university_degree,program_of_study,year,Female,Male
+Education ,bachelor,2022,4028,324
+Education ,bachelor,2023,2238,111
+Education ,bachelor,2024,2317,101
+Art and Human Resources,bachelor,2022,5777,2631
+Art and Human Resources,bachelor,2023,5177,2100
+Art and Human Resources,bachelor,2024,5187,2101
+Social Science,bachelor,2022,2765,931
+Social Science,bachelor,2023,4884,1029
+Social Science,bachelor,2024,3135,967
+Business,bachelor,2022,11575,9604
+Business,bachelor,2023,9685,7129
+Business,bachelor,2024,9025,6896
+Natural Science,bachelor,2022,1407,453
+Natural Science,bachelor,2023,1593,695
+Natural Science,bachelor,2024,1281,394
+Technology,bachelor,2022,2195,5439
+Technology,bachelor,2023,2348,4895
+Technology,bachelor,2024,3605,5920
+Construction and Production Engineering,bachelor,2022,2964,4345
+Construction and Production Engineering,bachelor,2023,2904,3320
+Construction and Production Engineering,bachelor,2024,2768,3103
+Agriculture,bachelor,2022,802,793
+Agriculture,bachelor,2023,751,576
+Agriculture,bachelor,2024,914,609
+Medicine,bachelor,2022,8506,2890
+Medicine,bachelor,2023,6961,2594
+Medicine,bachelor,2024,8565,2523
+Services,bachelor,2022,807,1948
+Services,bachelor,2023,698,1335
+Services,bachelor,2024,672,1170
