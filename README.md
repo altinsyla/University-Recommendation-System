@@ -5,13 +5,13 @@ The University Recommendation System is designed to guide high school students i
 
 ## Features
 **Insights**
-The Insights page provides a detailed analysis of student enrollment trends across different degrees, highlighting the number of male and female students over the years. The data is sourced from ASK, ensuring accuracy and reliability.
+- The Insights page provides a detailed analysis of student enrollment trends across different degrees, highlighting the number of male and female students over the years. The data is sourced from ASK, ensuring accuracy and reliability.
 
 **Predict Degree**
-The Predict Degree page features a form where students can input their average grade (with multiple categories) and list their skills (selecting multiple options). Based on this information, the system will match students with the most suitable university degree options.
+- The Predict Degree page features a form where students can input their average grade (with multiple categories) and list their skills (selecting multiple options). Based on this information, the system will match students with the most suitable university degree options.
 
 **University Degree**
-The University Degrees page displays a comprehensive list of all available degrees and their associated programs, providing students with detailed information to explore their options.
+- The University Degrees page displays a comprehensive list of all available degrees and their associated programs, providing students with detailed information to explore their options.
 
 ## Technology Stack
 - Python
