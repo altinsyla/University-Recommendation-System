@@ -15,13 +15,13 @@ Engineering,Electrical Engineering,3.5,Control System Engineering,"PID Control, 
 Engineering,Electrical Engineering,3.5,Electronics and Circuit Design,"Circuit Simulation, PCB Design, Analog and Digital Electronics, Soldering Techniques, Signal Amplification"
 Engineering,Electrical Engineering,3.5,Communication System Engineering,"Wireless Communication, Signal Modulation, Network Design, Fiber Optic Technology, Communication Protocols"
 Engineering,Electrical Engineering,3.5,Instrumentation and Measurement,"Sensors Calibration, Data Acquisition Systems, Measurement Accuracy, Process Control, Signal Conditioning"
-Engineering,Software Engineering,4,Software Development,"Programming Languages (Java, C++, Python), Software Testing, Debugging, Version Control (Git), Algorithm Design"
-Engineering,Software Engineering,4,Web Development,"HTML/CSS, JavaScript, Responsive Design, Frontend Frameworks (React, Angular), Backend Development (Node.js, PHP)
+Engineering,Computer Science,4,Software Development,"Programming Languages Java, C++, Python, Software Testing, Debugging, Version Control (Git), Algorithm Design"
+Engineering,Computer Science,4,Web Development,"HTML/CSS, JavaScript, Responsive Design, Frontend Frameworks React, Angular, Backend Development Node.js, PHP
 
 "
-Engineering,Software Engineering,4,Mobile App Development,"Mobile Programming Languages (Swift, Kotlin), UI/UX Design, App Testing, Cross-Platform Development (Flutter, React Native), API Integration"
-Engineering,Software Engineering,4,Database Management,"SQL, Database Design, Data Modeling, Database Optimization, Backup and Recovery"
-Engineering,Software Engineering,4,Cloud Computing,"Cloud Platforms (AWS, Azure, Google Cloud), Virtualization, Cloud Security, Containerization (Docker), DevOps"
+Engineering,Computer Science,4,Mobile App Development,"Mobile Programming Languages Swift, Kotlin, UI/UX Design, App Testing, Cross-Platform Development Flutter, React Native, API Integration"
+Engineering,Computer Science,4,Database Management,"SQL, Database Design, Data Modeling, Database Optimization, Backup and Recovery"
+Engineering,Computer Science,4,Cloud Computing,"Cloud Platforms (AWS), Azure, Google Cloud, Virtualization, Cloud Security, Containerization Docker, DevOps"
 Engineering,Telecommunication Engineering,3.5,Wireless Communication Systems,"Radio Frequency (RF) Design, Mobile Network Optimization, Spectrum Management, Antenna Design, Wireless Protocols (Wi-Fi, Bluetooth)"
 Engineering,Telecommunication Engineering,3.5,Optical Communication,"Fiber Optic Networks, Signal Modulation, Optical Amplifiers, Wavelength Division Multiplexing (WDM), Optical Switching"
 Engineering,Telecommunication Engineering,3.5,Network Infrastructure and Protocols,"TCP/IP Protocols, Network Topology, Routing and Switching, Network Security, VPN Configuration"
@@ -111,7 +111,7 @@ Business,International Business,3.5,Cross-Cultural Management,"Cultural Awarenes
 Business,International Business,3.5,International Trade,"Trade Regulations, Export/Import Procedures, Global Trade Agreements, Tariffs and Duties, Supply Chain Management"
 Business,International Business,3.5,International Marketing,"Global Market Research, Cross-Cultural Consumer Behavior, International Brand Management, Marketing Strategy, Localization"
 Business,International Business,3.5,Global Finance,"Currency Exchange, International Investment, Global Risk Management, Foreign Market Analysis, Multinational Financial Reporting"
-Natural Science,Physics,3.5,Quantum Mechanics,"Wave-Particle Duality, Quantum Superposition, Quantum Entanglement, Schrödinger Equation, Quantum Tunneling"
+Natural Science,Physics,3.5,Quantum Mechanics,"Wave-Particle Duality, Quantum Superposition, Quantum Entanglement, Schrï¿½dinger Equation, Quantum Tunneling"
 Natural Science,Physics,3.5,Thermodynamics,"Laws of Thermodynamics, Heat Transfer, Entropy, Energy Conversion, Thermodynamic Cycles"
 Natural Science,Physics,3.5,Astrophysics,"Cosmology, Stellar Evolution, Black Holes, Gravitational Waves, Space Observation Techniques"
 Natural Science,Physics,3.5,Solid-State physics,"Crystallography, Semiconductor Physics, Nanomaterials, Magnetic Properties, Band Theory"
