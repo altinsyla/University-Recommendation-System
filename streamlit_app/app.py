@@ -3,7 +3,162 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from openai import OpenAI
+
+st.markdown(
+    """
+    <style>
+    .st-emotion-cache-zaw6nw {
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Vertically center the content if necessary */
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.2rem
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    text-transform: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    background-color: black;
+    border: none;
+    }
+    .st-emotion-cache-jh76sn {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: flex-start;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    text-transform: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgb(43, 44, 54);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+}
+    .st-emotion-cache-zaw6nw:hover {
+        background-color:  #3b3b3b;
+    }
+    .st-emotion-cache-1mw54nq h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.25rem 0px 1rem;
+    color: white;
+    }
+
+    .st-emotion-cache-zaw6nw:hover {
+        color: red;
+    }
+
+    .st-emotion-cache-4tlk2p p {
+    color: #808080;
+    }
+    .st-emotion-cache-4tlk2p p:hover {
+    color: white;
+    }
+    .st-emotion-cache-6qob1r {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: overlay;
+    background-color: black;
+    }
+    .st-emotion-cache-yw8pof {
+    width: 100%;
+    padding: 4rem 0rem 10rem;
+    max-width: 46rem;
+}
+    .st-bh {
+    cursor:pointer;
+    }
+    .st-emotion-cache-ocsh0s {
+    display: inline-flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    text-transform: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 150px;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(49, 51, 63, 0.2);
+    margin-top: 2rem;
+    margin-left: 40%;
+    color: #808080;
+}
+    .st-emotion-cache-b0y9n5{
+            display: inline-flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    text-transform: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 150px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid rgba(49, 51, 63, 0.2);
+    margin-top: 2rem;
+    margin-left: 40%;
+    color: white;
+    }
+    .st-emotion-cache-ocsh0s:hover {
+        border-color: #808080;
+        color: black;
+        }
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+    }
+    .st-ft{
+        background-color: #808080;
+    }
+    .st-emotion-cache-1lvxfs7 h2{
+        color: black;
+    }
+    .st-emotion-cache-1lvxfs7 {
+        margin-bottom: 1rem;
+    }
+    
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 
 # Leximi i file ne repository
 current_dir = os.path.dirname(__file__)
@@ -27,11 +182,11 @@ if st.sidebar.button("📊 Insights"):
 if st.sidebar.button("🔮 Predict Degree"):
     st.session_state.page = "Predict Degree"
     
-if st.sidebar.button("University Degree"):
+if st.sidebar.button("🏫 University Degree"):
     st.session_state.page = "University Degree"
 
 if st.session_state.page == "Insights":
-    st.header("This page contains statistics about Degrees")
+    st.header("Insights")
 
     if 'university_degree' not in analysis_df.columns or 'year' not in analysis_df.columns:
         st.error("The dataset does not contain the required columns: 'university_degree', 'year', 'Female', 'Male'.")
@@ -65,14 +220,13 @@ if st.session_state.page == "Insights":
                     st.error(f"Error generating pivot table or plot: {e}")
 
 elif st.session_state.page == "Predict Degree":
-    st.header("Find the Best Degree for You")
+    st.header("Predict Degree")
 
     avg_grade = st.number_input("Enter your average grade", min_value=3.0, max_value=5.0, step=0.1)
 
     if 'Category' not in prediction_df.columns or 'Skills' not in prediction_df.columns or 'Min Grade' not in prediction_df.columns:
         st.error("The prediction dataset does not contain the required columns: 'Category', 'Skills', 'Min Grade'.")
     else:
-        
         categories = prediction_df['Category'].unique().tolist()
         selected_categories = st.multiselect("Select Categories", options=categories)
 
@@ -88,7 +242,6 @@ elif st.session_state.page == "Predict Degree":
             if avg_grade == 0.0 or not selected_categories or not selected_skills:
                 st.warning("Please fill in all fields before predicting.")
             else:
-                
                 def count_category_overlap(degree_categories):
                     return len(set(degree_categories.split(',')) & set(selected_categories))
 
@@ -105,22 +258,23 @@ elif st.session_state.page == "Predict Degree":
                     (prediction_df['Category Overlap'] > 0)
                 ]
 
-                recommendations = recommendations.sort_values(by=['Skill Overlap', 'Category Overlap'], ascending=False)
+                
+                top_recommendation = recommendations.sort_values(
+                    by=['Skill Overlap', 'Category Overlap'], ascending=False
+                ).head(1)
 
-                if not recommendations.empty:
-                    st.write("### Recommended degrees (based on the closest match):")
-                    for _, degree in recommendations.iterrows():
-                        st.write(f"#### Degree: **{degree['University Degree']}**")
-                        st.write(f"- **Category**: {degree['Category']}")
-                        st.write(f"- **Skills**: {degree['Skills']}")
-                        st.write(f"- **Skill Matches**: {degree['Skill Overlap']}")
-                        st.write(f"- **Minimum Grade**: {degree['Min Grade']}")
-                        st.write("---")
+                if not top_recommendation.empty:
+                    degree = top_recommendation.iloc[0]
+                    st.write("### Best Matched Degree:")
+                    st.write(f"#### Degree: **{degree['University Degree']}**")
+                    st.write(f"- **Category**: {degree['Category']}")
+                    st.write(f"- **Skills**: {degree['Skills']}")
+                    st.write(f"- **Minimum Grade**: {degree['Min Grade']}")
                 else:
                     st.warning("No programs match your criteria. Try selecting fewer skills or different categories.")
 
 elif st.session_state.page == "University Degree":
-    st.header("Explore University Degrees and Their Programs")
+    st.header("Explore University Degrees")
     
     degrees = [
         {
@@ -189,8 +343,8 @@ elif st.session_state.page == "University Degree":
         degree1 = degrees[i]
         with col1:
             st.markdown(f"<h5>{degree1['title']}</h5>", unsafe_allow_html=True)
-            st.image(degree1["image"], width=300)
-            with st.expander(f"Explore Programs ({degree1['title']})"):
+            with st.expander(f"Explore Programs"):
+                st.image(degree1["image"])
                 for program, min_grade in zip(degree1["programs"], degree1["min grade"]):
                     st.write(f"- **{program}** (Min Grade: {min_grade})")
         
@@ -199,7 +353,8 @@ elif st.session_state.page == "University Degree":
             degree2 = degrees[i + 1]
             with col2:
                 st.markdown(f"<h5>{degree2['title']}</h5>", unsafe_allow_html=True)
-                st.image(degree2["image"], width=300)
-                with st.expander(f"Explore Programs ({degree2['title']})"):
+                with st.expander(f"Explore Programs"):
+                    st.image(degree2["image"])
                     for program, min_grade in zip(degree2["programs"], degree2["min grade"]):
                         st.write(f"- **{program}** (Min Grade: {min_grade})")
+            
