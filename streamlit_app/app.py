@@ -78,6 +78,9 @@ st.markdown(
     .st-emotion-cache-4tlk2p p:hover {
     color: white;
     }
+    .st-emotion-cache-170hxnn {
+        gap: 0;
+    }
     .st-emotion-cache-6qob1r {
     position: relative;
     height: 100%;
@@ -151,9 +154,6 @@ st.markdown(
         height: 350px;
         object-fit: contain;
     }
-    .st-ft{
-        background-color: #808080;
-    }
     .st-hj {
     background-color: rgb(255, 75, 75);
     }
@@ -188,8 +188,6 @@ st.markdown(
     flex-grow: 1;
     -webkit-box-align: stretch;
     align-items: stretch;
-    gap: 1rem;
-    margin-bottom: 3rem;
     }
 }
     </style>
@@ -303,12 +301,13 @@ elif st.session_state.page == "Predict Degree":
                 if not top_recommendation.empty:
                     degree = top_recommendation.iloc[0]
                     st.write("### Best Matched Degree:")
-                    st.write(f"#### Degree: **{degree['University Degree']}**")
+                    st.write(f"##### Degree: **{degree['University Degree']}**")
+                    st.write(f"- **Program**: {degree['Program']}")
                     st.write(f"- **Category**: {degree['Category']}")
                     st.write(f"- **Skills**: {degree['Skills']}")
-                    st.write(f"- **Minimum Grade**: {degree['Min Grade']}")
+                    st.write(f"- **Minimum Grade Required**: {degree['Min Grade']}")
                 else:
-                    st.warning("No programs match your criteria. Try selecting fewer skills or different categories.")
+                    st.warning("No programs match your criteria. Your average grade can be smaller than required.")
 
 elif st.session_state.page == "University Degree":
     st.header("Explore University Degrees")
