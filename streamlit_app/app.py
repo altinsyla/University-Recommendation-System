@@ -127,7 +127,8 @@ st.markdown(
     color: #808080;
     }
     .st-emotion-cache-b0y9n5{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -147,7 +148,6 @@ st.markdown(
     user-select: none;
     border: 1px solid rgba(49, 51, 63, 0.2);
     margin-top: 2rem;
-    margin-left: 40%;
     color: white;
     }
     .st-emotion-cache-ocsh0s:hover {
