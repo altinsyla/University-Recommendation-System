@@ -96,6 +96,11 @@ st.markdown(
     .st-bh {
     cursor:pointer;
     }
+    .stButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .st-emotion-cache-ocsh0s {
     display: inline-flex;
     -webkit-box-align: center;
@@ -118,7 +123,6 @@ st.markdown(
     background-color: rgb(255, 255, 255);
     border: 1px solid rgba(49, 51, 63, 0.2);
     margin-top: 2rem;
-    margin-left: 40%;
     color: #808080;
     }
     .st-emotion-cache-b0y9n5{
@@ -149,11 +153,11 @@ st.markdown(
         border-color: #808080;
         color: black;
     }
-    img{
-        width: 350px;
-        height: 350px;
-        object-fit: contain;
-    }
+    # img{
+    #     width: 350px;
+    #     height: 350px;
+    #     object-fit: contain;
+    # }
     .st-hj {
     background-color: rgb(255, 75, 75);
     }
