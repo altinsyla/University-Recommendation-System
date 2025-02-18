@@ -153,11 +153,11 @@ st.markdown(
         border-color: #808080;
         color: black;
     }
-    # img{
-    #     width: 350px;
-    #     height: 350px;
-    #     object-fit: contain;
-    # }
+    img{
+        width: 350px;
+        height: 350px;
+        object-fit: contain;
+    }
     .st-hj {
     background-color: rgb(255, 75, 75);
     }
