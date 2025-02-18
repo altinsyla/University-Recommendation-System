@@ -102,9 +102,10 @@ st.markdown(
         justify-content: center;
     }
     .st-emotion-cache-ocsh0s {
-    display: inline-flex;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
+    flex-direction: row;
     -webkit-box-pack: center;
     justify-content: center;
     font-weight: 400;
